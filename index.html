@@ -68,7 +68,7 @@
     <article id="post-使用服务器、域名以及hexo工具部署自己博客的方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/" class="article-date">
-  <time datetime="2020-11-14T07:09:30.358Z" itemprop="datePublished">2020-11-14</time>
+  <time datetime="2020-11-14T08:28:36.517Z" itemprop="datePublished">2020-11-14</time>
 </a>
     
   </div>
@@ -85,7 +85,7 @@
 <p>下载方式：在Linux用户主目录下面执行如下命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v14.15.0/node-v14.15.0-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114100005810.png" alt="image-20201114100005810"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95%5C1.png" alt="image-20201114100005810"></p>
 </li>
 <li><p>移除老版本nodejs软件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum erase -y nodejs</span><br></pre></td></tr></table></figure>
@@ -97,20 +97,20 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xf node-v14.15.0-linux-x64.tar</span><br></pre></td></tr></table></figure>
 
 <p>展开解压缩和解归档软件后如下所示：</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114101040170.png" alt="image-20201114101040170"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/2.png" alt="image-20201114101040170"></p>
 <p>可以看到，里面已经包含了bin文件，则表示里面已经包含了可执行文件了，nodejs安装已经完成了，这就是二进制安装包的好处，解压缩、解归档后可以直接使用软件，不需要其他额外操作!</p>
 </li>
 </ol>
 <ol start="5">
 <li><p>配置环境变量（软件安装完成一般都需要PATH配置环境变量）</p>
 <p>首先复制软件执行路径：</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114101640513.png" alt="image-20201114101640513"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/3.png" alt="image-20201114101640513"></p>
 <p>然后将路径加入用户环境变量设置文件里面：<br>用户环境变量设置的地方在用户主目录下的.bash_profile文件里面</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
 <p> 环境变量配置好后保存退出！</p>
 </li>
 </ol>
-<p>​        <img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114102412487.png" alt="image-20201114102412487"></p>
+<p>​        <img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/4.png" alt="image-20201114102412487"></p>
 <ol start="6">
 <li><p>退出重新登录Linux</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
@@ -151,36 +151,36 @@
 <li><p>进行域名解析（这里使用阿里云举例）：使用域名访问博客网页</p>
 <p>域名解析方法如下图所示：</p>
 <p>主页点击右上角控制台后点击<strong>域名</strong>：</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114105832001.png" alt="image-20201114105832001"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/5.png" alt="image-20201114105832001"></p>
 <p>在域名列表里面选择想要使用的域名，然后点击右边的<strong>解析</strong>：</p>
 </li>
 </ol>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114110108188.png" alt="image-20201114110108188"></p>
-<p>​        选择域名设置，然后点击添加记录，按照下图提示进行记录的添加<img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114110447360.png" alt="image-20201114110447360"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/6.png" alt="image-20201114110108188"></p>
+<p>​        选择域名设置，然后点击添加记录，按照下图提示进行记录的添加<img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/7.png" alt="image-20201114110447360"></p>
 <ol start="15">
 <li><p>域名输入到网站上，如果出现类似的如下界面，说明博客部署成功</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114111208446.png" alt="image-20201114111208446"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/8.png" alt="image-20201114111208446"></p>
 </li>
 </ol>
 <h2 id="二-域名没备案的情况下搭建自己的博客"><a href="#二-域名没备案的情况下搭建自己的博客" class="headerlink" title="二.域名没备案的情况下搭建自己的博客"></a>二.域名没备案的情况下搭建自己的博客</h2><p>域名没备案的情况下，如果想要搭建自己的博客，可以将自己的域名依托于已经认证过的git网站上，这样可以避免域名被封！！！</p>
 <p>这里以github来举例，操作的方法如下所步骤：</p>
 <ol>
 <li><p>首先登录github账户，建立一个以自己  “<strong>用户名.github.io</strong>“  的仓库，此处名字一定要以这样的规则命名，否则可能后面部署博客可能要出错！！！</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114114041759.png" alt="image-20201114114041759"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/9.png" alt="image-20201114114041759"></p>
 </li>
 </ol>
 <ol start="2">
 <li><p>进入仓库获取仓库的https地址：</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114114718410.png" alt="image-20201114114718410"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/10.png" alt="image-20201114114718410"></p>
 </li>
 <li><p>在Linux系统里面切换到blog文件，修改里面的_config.yml文件</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114114900618.png" alt="image-20201114114900618"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/11.png" alt="image-20201114114900618"></p>
 </li>
 <li><p>_config.yml文件修改：</p>
 <p>修改的内容如下所示，需要增加type、repo和branch内容，其中，repo内容就是刚才复制的git仓库的https地址，分支设为master分支，设置完成后保存退出</p>
 </li>
 </ol>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114115025768.png" alt="image-20201114115025768"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/12.png" alt="image-20201114115025768"></p>
 <ol start="5">
 <li><p>安装一键部署插件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
@@ -193,7 +193,7 @@
 </ol>
 <p>进行到这步，其实我们就可以实现使用git服务器上面的仓库名称来访问我们的博客网站了。</p>
 <p>如使用第四个操作步骤中的ChaoLinHu.github.io即可访问博客。</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114142008757.png" alt="image-20201114142008757"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/13.png" alt="image-20201114142008757"></p>
 <p>此时博客内容其实挂靠在github服务器上面的，如果还是想使用自己的域名，则还需进行一些额外的操作，额外的操作如下。</p>
 <ol start="7">
 <li><p>切换到blog文件下的source文件夹下面：</p>
@@ -205,15 +205,15 @@
 <li><p>编辑文件内容，将自己购买的域名写入此文件，比如我这里购买了一个临时域名：huchaolin123.top，写入文件展示如下</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim CNAME</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114142855038.png" alt="image-20201114142855038"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/14.png" alt="image-20201114142855038"></p>
 </li>
 <li><p>回到blog文件夹后，重新一键部署。</p>
 </li>
 <li><p>重新进行域名解析设置</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114143623407.png" alt="image-20201114143623407"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/15.png" alt="image-20201114143623407"></p>
 </li>
 <li><p>直接使用域名搜索，即可再一次看见自己的博客内容</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114143813795.png" alt="image-20201114143813795"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/16.png" alt="image-20201114143813795"></p>
 </li>
 </ol>
 <h2 id="三-将自己的博客内容放到自己部署的博客网站上"><a href="#三-将自己的博客内容放到自己部署的博客网站上" class="headerlink" title="三.将自己的博客内容放到自己部署的博客网站上"></a>三.将自己的博客内容放到自己部署的博客网站上</h2><ol>
@@ -222,7 +222,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp test.md root@47.5.13.16：/root/blog/source/_posts</span><br></pre></td></tr></table></figure>
 
 <p>然后输入服务器的密码即可将windows的文件传至_posts文件夹下面</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114144938252.png" alt="image-20201114144938252"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/17.png" alt="image-20201114144938252"></p>
 </li>
 <li><p>然后再回到blog文件夹后，重新一键部署</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">cd ..</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
@@ -231,10 +231,10 @@
 </ol>
 <p>​    3. 重新使用域名访问一次，即可看到自己的博文内容。</p>
 <h2 id="四-扩展内容"><a href="#四-扩展内容" class="headerlink" title="四.扩展内容"></a>四.扩展内容</h2><p>blog项目文件夹下面有很多文件，这个再给大家介绍几个其他的文件夹的作用，如下图所示：</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114150028819.png" alt="image-20201114150028819"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/18.png" alt="image-20201114150028819"></p>
 <p>主题下载的网址：<a target="_blank" rel="noopener" href="https://hexo.io/themes">https://hexo.io/themes</a></p>
 <p>下载主题和修改主题的方法如下图和图中文字所述：</p>
-<p><img src="C:\Users\hu.chaolin\AppData\Roaming\Typora\typora-user-images\image-20201114150146043.png" alt="image-20201114150146043"></p>
+<p><img src="/2020/11/14/%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8Ahexo%E5%B7%A5%E5%85%B7%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%B9%E6%B3%95/19.png" alt="image-20201114150146043"></p>
 
       
     </div>
